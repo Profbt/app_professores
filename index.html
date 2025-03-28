@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Professor | Colégio Vicente Rijo</title>
+  <meta name="theme-color" content="#2b5797">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <img src="assets/img/logo.png" alt="Logo Vicente Rijo" class="logo">
+      <h1>Portal do Professor</h1>
+    </header>
+
+    <!-- Botão de Login GovPR -->
+    <button id="govpr-login" class="login-btn">
+      <img src="assets/img/govpr-icon.png" alt="GovPR">
+      Acessar com GovPR
+    </button>
+
+    <!-- Contatos de Emergência -->
+    <div class="emergency">
+      <button id="emergency-btn" class="emergency-btn">🆘 Contatos Emergência</button>
+      <div id="emergency-contacts" class="hidden">
+        <h3>Direção</h3>
+        <a href="https://wa.me/5543999999999" class="whatsapp-btn">WhatsApp Diretor(a)</a>
+        
+        <h3>Pedagogia - Ensino Médio</h3>
+        <a href="https://wa.me/5543999999991" class="whatsapp-btn">Pedagogo 1</a>
+        <a href="https://wa.me/5543999999992" class="whatsapp-btn">Pedagogo 2</a>
+        <a href="https://wa.me/5543999999993" class="whatsapp-btn">Pedagogo 3</a>
+        
+        <h3>Pedagogia - Ensino Fundamental</h3>
+        <a href="https://wa.me/5543999999994" class="whatsapp-btn">Pedagogo 1</a>
+        <a href="https://wa.me/5543999999995" class="whatsapp-btn">Pedagogo 2</a>
+        <a href="https://wa.me/5543999999996" class="whatsapp-btn">Pedagogo 3</a>
+      </div>
+    </div>
+
+    <!-- Links Principais -->
+    <div class="links-container">
+      <a href="https://registropontoseed.pr.gov.br" class="link-btn" id="ponto-link">
+        ⏱ Sistema de Ponto
+      </a>
+      <a href="https://sites.google.com/escola.pr.gov.br/muraldoprofessorvicenterijo" class="link-btn">
+        📌 Mural do Professor
+      </a>
+      <a href="https://rco.paas.pr.gov.br/" class="link-btn" id="rco-link">
+        📖 RCO
+      </a>
+      <a href="https://docs.google.com/spreadsheets/d/1vlClPLWDPgd2ShuI6qdpeDYctPFJsy3S/edit" class="link-btn">
+        🕒 Horário Laboratórios
+      </a>
+      <a href="mailto:provasvicenterijo@gmail.com" class="link-btn">
+        ✉️ E-mail Provas
+      </a>
+      <a href="https://appsouparana.paas.pr.gov.br/login" class="link-btn" id="contracheque-link">
+        💰 Contracheque
+      </a>
+    </div>
+
+    <!-- Botão de Tutoriais -->
+    <a href="https://drive.google.com/..." class="tutorial-btn">
+      ❓ Tutoriais
+    </a>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Registrar Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>
