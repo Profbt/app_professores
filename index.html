@@ -4,164 +4,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal do Professor | Vicente Rijo</title>
-  
-  <!-- Meta Tags PWA Essenciais -->
-  <meta name="theme-color" content="#000070">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="Aplicativo oficial com links úteis para professores do Colégio Vicente Rijo">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  
   <!-- CSS Local -->
   <link rel="stylesheet" href="assets/css/style.css">
-  
-  <!-- Manifest PWA -->
+  <!-- PWA Config -->
   <link rel="manifest" href="manifest.json">
-  
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" href="images/icons/icon-192.png">
+  <meta name="theme-color" content="#2c3e50">
 </head>
-
 <body>
-  <!-- Container Principal -->
   <div class="app-container">
-    
-    <!-- Cabeçalho com Gradiente -->
-    <header class="header-gradient">
-      <div class="container">
-        <div class="logo-container">
-          <img src="assets/images/logo.webp" alt="Colégio Vicente Rijo" class="logo" loading="lazy">
-        </div>
-        <h1>Portal do Professor</h1>
-        <p class="subtitle">Tudo organizado em um só lugar</p>
-      </div>
+    <!-- Header -->
+    <header class="app-header">
+      <img src="images/logo.png" alt="Colégio Vicente Rijo" class="app-logo">
+      <h1>Portal do Professor</h1>
+      <p class="app-subtitle">Acesso rápido aos recursos educacionais</p>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="container">
-      
-      <!-- Seção de Contatos Emergenciais -->
-      <section class="emergency-card card-glass">
-        <button id="emergency-btn" class="emergency-btn" aria-expanded="false" aria-controls="emergency-contacts">
-          <i class="bi bi-phone-vibrate"></i>
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- Emergency Contacts -->
+      <div class="emergency-section">
+        <button id="emergency-btn" class="emergency-btn">
+          <i class="fas fa-ambulance"></i>
           Contatos Emergenciais
-          <i class="bi bi-chevron-down"></i>
+          <i class="fas fa-chevron-down toggle-icon"></i>
         </button>
-        
-        <div id="emergency-contacts" class="hidden" aria-hidden="true">
-          <!-- Direção -->
+        <div id="emergency-contacts" class="contacts-container hidden">
           <div class="contact-group">
-            <h3><i class="bi bi-person-gear"></i> Direção</h3>
-            <a href="https://wa.me/5543999999999" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. João Silva (Diretor)
+            <h3><i class="fas fa-user-tie"></i> Direção</h3>
+            <a href="https://wa.me/5543999999999" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Diretor João Silva
             </a>
           </div>
           
-          <!-- Pedagogia - Ensino Médio -->
           <div class="contact-group">
-            <h3><i class="bi bi-mortarboard"></i> Pedagogia - EM</h3>
-            <a href="https://wa.me/5543999999991" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. Maria Oliveira
+            <h3><i class="fas fa-chalkboard-teacher"></i> Pedagogia - EM</h3>
+            <a href="https://wa.me/5543999999991" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Prof. Maria Oliveira
             </a>
-            <a href="https://wa.me/5543999999992" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. Carlos Souza
+            <a href="https://wa.me/5543999999992" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Prof. Carlos Souza
             </a>
-            <a href="https://wa.me/5543999999993" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. Ana Pereira
+            <a href="https://wa.me/5543999999993" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Prof. Ana Pereira
             </a>
           </div>
           
-          <!-- Pedagogia - Ensino Fundamental -->
           <div class="contact-group">
-            <h3><i class="bi bi-backpack"></i> Pedagogia - EF</h3>
-            <a href="https://wa.me/5543999999994" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. Pedro Costa
+            <h3><i class="fas fa-school"></i> Pedagogia - EF</h3>
+            <a href="https://wa.me/5543999999994" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Prof. Pedro Costa
             </a>
-            <a href="https://wa.me/5543999999995" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. Juliana Santos
+            <a href="https://wa.me/5543999999995" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Prof. Juliana Santos
             </a>
-            <a href="https://wa.me/5543999999996" class="whatsapp-btn" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Prof. Roberto Almeida
+            <a href="https://wa.me/5543999999996" class="contact-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> Prof. Roberto Almeida
             </a>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Grade de Links Principais -->
-      <section class="links-grid">
-        <!-- Sistema de Ponto -->
-        <a href="https://registropontoseed.pr.gov.br" class="link-card" target="_blank" rel="noopener">
-          <div class="link-icon" style="--icon-color: #ff9a9e">
-            <i class="bi bi-fingerprint"></i>
+      <!-- Main Links Grid -->
+      <div class="links-grid">
+        <a href="https://registropontoseed.pr.gov.br" class="app-link">
+          <div class="link-icon">
+            <i class="fas fa-fingerprint"></i>
           </div>
           <span>Sistema de Ponto</span>
         </a>
         
-        <!-- Mural do Professor -->
-        <a href="https://sites.google.com/escola.pr.gov.br/muraldoprofessorvicenterijo" class="link-card" target="_blank" rel="noopener">
-          <div class="link-icon" style="--icon-color: #a18cd1">
-            <i class="bi bi-chat-square-text"></i>
+        <a href="https://sites.google.com/escola.pr.gov.br/muraldoprofessorvicenterijo" class="app-link">
+          <div class="link-icon">
+            <i class="fas fa-chalkboard"></i>
           </div>
           <span>Mural do Professor</span>
         </a>
         
-        <!-- RCO -->
-        <a href="https://rco.paas.pr.gov.br/" class="link-card" target="_blank" rel="noopener">
-          <div class="link-icon" style="--icon-color: #84fab0">
-            <i class="bi bi-journal-bookmark"></i>
+        <a href="https://rco.paas.pr.gov.br/" class="app-link">
+          <div class="link-icon">
+            <i class="fas fa-book-open"></i>
           </div>
-          <span>Registro de Classe (RCO)</span>
+          <span>Registro de Classe</span>
         </a>
         
-        <!-- Horário Laboratórios -->
-        <a href="https://docs.google.com/spreadsheets/d/1vlClPLWDPgd2ShuI6qdpeDYctPFJsy3S/edit" class="link-card" target="_blank" rel="noopener">
-          <div class="link-icon" style="--icon-color: #fbc2eb">
-            <i class="bi bi-clock"></i>
+        <a href="https://docs.google.com/spreadsheets/d/1vlClPLWDPgd2ShuI6qdpeDYctPFJsy3S/edit" class="app-link">
+          <div class="link-icon">
+            <i class="fas fa-clock"></i>
           </div>
           <span>Horário Laboratórios</span>
         </a>
         
-        <!-- E-mail de Provas -->
-        <a href="mailto:provasvicenterijo@gmail.com" class="link-card">
-          <div class="link-icon" style="--icon-color: #ffc3a0">
-            <i class="bi bi-envelope"></i>
+        <a href="mailto:provasvicenterijo@gmail.com" class="app-link">
+          <div class="link-icon">
+            <i class="fas fa-envelope"></i>
           </div>
           <span>E-mail de Provas</span>
         </a>
         
-        <!-- Contracheque -->
-        <a href="https://appsouparana.paas.pr.gov.br/login" class="link-card" target="_blank" rel="noopener">
-          <div class="link-icon" style="--icon-color: #ffb347">
-            <i class="bi bi-wallet2"></i>
+        <a href="https://appsouparana.paas.pr.gov.br/login" class="app-link">
+          <div class="link-icon">
+            <i class="fas fa-money-bill-wave"></i>
           </div>
           <span>Contracheque</span>
         </a>
-      </section>
-      
-      <!-- Botão de Tutoriais -->
-      <section class="tutorial-section">
-        <a href="https://drive.google.com/drive/folders/..." class="tutorial-btn" target="_blank" rel="noopener">
-          <i class="bi bi-file-earmark-text"></i> Tutoriais e Manuais
-        </a>
-      </section>
+      </div>
+
+      <!-- Tutorial Button -->
+      <a href="https://drive.google.com/" class="tutorial-btn">
+        <i class="fas fa-book-open"></i> Tutoriais e Manuais
+      </a>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-      <p>Desenvolvido com <i class="bi bi-heart-fill"></i> por Prof. Bruno Carvalho, 2025</p>
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Desenvolvido com <i class="fas fa-heart"></i> por Prof. Bruno Carvalho, 2025</p>
     </footer>
   </div>
 
-  <!-- Scripts -->
-  <script src="assets/js/pwa.js" defer></script>
-  <script src="assets/js/app.js" defer></script>
+  <!-- JavaScript -->
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
 </body>
 </html>

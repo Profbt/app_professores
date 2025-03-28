@@ -2,41 +2,54 @@ document.addEventListener('DOMContentLoaded', function() {
   // Contatos Emergenciais
   const emergencyBtn = document.getElementById('emergency-btn');
   const emergencyContacts = document.getElementById('emergency-contacts');
-  
+  const toggleIcon = document.querySelector('.toggle-icon');
+
   emergencyBtn.addEventListener('click', function() {
+    // Alternar visibilidade
     emergencyContacts.classList.toggle('hidden');
-    const icon = this.querySelector('.bi-chevron-down');
-    icon.classList.toggle('rotate');
     
+    // Animação do ícone
     if (emergencyContacts.classList.contains('hidden')) {
-      this.innerHTML = `<i class="bi bi-phone-vibrate"></i> Contatos Emergenciais <i class="bi bi-chevron-down"></i>`;
+      toggleIcon.classList.remove('fa-chevron-up');
+      toggleIcon.classList.add('fa-chevron-down');
+      emergencyBtn.style.borderRadius = '15px';
     } else {
-      this.innerHTML = `<i class="bi bi-phone-vibrate"></i> Ocultar Contatos <i class="bi bi-chevron-up"></i>`;
+      toggleIcon.classList.remove('fa-chevron-down');
+      toggleIcon.classList.add('fa-chevron-up');
+      emergencyBtn.style.borderRadius = '15px 15px 0 0';
     }
   });
 
-  // Efeito nos cards
-  const linkCards = document.querySelectorAll('.link-card');
-  linkCards.forEach(card => {
-    card.addEventListener('mousedown', function() {
-      this.style.transform = 'translateY(0)';
+  // Efeitos nos links
+  const appLinks = document.querySelectorAll('.app-link');
+  
+  appLinks.forEach(link => {
+    // Efeito hover
+    link.addEventListener('mouseenter', () => {
+      const icon = link.querySelector('.link-icon');
+      icon.style.transform = 'scale(1.1) rotate(5deg)';
     });
     
-    card.addEventListener('mouseup', function() {
-      this.style.transform = 'translateY(-5px)';
+    link.addEventListener('mouseleave', () => {
+      const icon = link.querySelector('.link-icon');
+      icon.style.transform = 'scale(1) rotate(0)';
+    });
+    
+    // Feedback ao clicar
+    link.addEventListener('mousedown', () => {
+      link.style.transform = 'translateY(-5px) scale(0.98)';
+    });
+    
+    link.addEventListener('mouseup', () => {
+      link.style.transform = 'translateY(-8px) scale(1)';
     });
   });
+
+  // Feedback visual para mobile
+  document.addEventListener('touchstart', function() {}, { passive: true });
 });
 
-// Adicionar ao arquivo existente
-
-// Animação para os ícones
-document.querySelectorAll('.link-icon').forEach(icon => {
-  icon.addEventListener('click', function() {
-    this.classList.add('pulse');
-    setTimeout(() => this.classList.remove('pulse'), 500);
-  });
-});
-
-// Feedback tátil para mobile
-document.addEventListener('touchstart', function() {}, { passive: true });
+// Verificar se é PWA instalado
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  console.log('Executando como PWA instalado');
+}

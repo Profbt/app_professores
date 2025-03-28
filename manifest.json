@@ -1,11 +1,11 @@
 {
-    "name": "Portal do Professor - Vicente Rijo",
+    "name": "Portal do Professor",
     "short_name": "Vicente Rijo",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#000070",
-    "theme_color": "#000070",
-    "description": "Aplicativo com links úteis para professores do Colégio Vicente Rijo",
+    "background_color": "#2c3e50",
+    "theme_color": "#2c3e50",
+    "description": "Aplicativo oficial para professores do Colégio Vicente Rijo",
     "icons": [
       {
         "src": "/images/icons/icon-72.png",
@@ -28,18 +28,8 @@
         "type": "image/png"
       },
       {
-        "src": "/images/icons/icon-152.png",
-        "sizes": "152x152",
-        "type": "image/png"
-      },
-      {
         "src": "/images/icons/icon-192.png",
         "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/images/icons/icon-384.png",
-        "sizes": "384x384",
         "type": "image/png"
       },
       {
