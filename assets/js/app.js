@@ -27,3 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Adicionar ao arquivo existente
+
+// Animação para os ícones
+document.querySelectorAll('.link-icon').forEach(icon => {
+  icon.addEventListener('click', function() {
+    this.classList.add('pulse');
+    setTimeout(() => this.classList.remove('pulse'), 500);
+  });
+});
+
+// Feedback tátil para mobile
+document.addEventListener('touchstart', function() {}, { passive: true });

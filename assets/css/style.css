@@ -4,6 +4,7 @@
   --dark: #0a0a3a;
   --light: #ffffff;
   --glass: rgba(255, 255, 255, 0.15);
+  --icon-color: #fbff00; /* Variável para cor dos ícones */
 }
 
 /* Base Styles */
@@ -98,6 +99,8 @@ h1 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: white;
+  background: linear-gradient(135deg, var(--icon-color) 0%, var(--primary) 100%);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Botões */
@@ -115,6 +118,42 @@ h1 {
 .whatsapp-btn:hover {
   background: #128C7E;
   transform: translateX(5px);
+}
+
+/* Estilos para o botão de tutoriais */
+.tutorial-btn {
+  display: block;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 80%;
+  background: linear-gradient(135deg, #fbff00 0%, #000070 100%);
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.tutorial-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para acessibilidade */
+[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Efeito para iOS */
+.ios-install-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark);
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+  text-align: center;
 }
 
 /* Footer */

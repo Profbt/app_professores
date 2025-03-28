@@ -64,3 +64,18 @@ if ('serviceWorker' in navigator) {
       });
     }
   }
+
+  // Adicionar esta função para detectar PWA instalado
+function checkPWAInstallation() {
+    window.addEventListener('appinstalled', () => {
+      console.log('PWA instalado com sucesso!');
+      localStorage.setItem('pwaInstalled', 'true');
+    });
+  
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      localStorage.setItem('pwaInstalled', 'true');
+    }
+  }
+  
+  // Inicializar
+  checkPWAInstallation();

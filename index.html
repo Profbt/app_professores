@@ -4,82 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal do Professor | Vicente Rijo</title>
-  <!-- Meta Tags PWA -->
+  
+  <!-- Meta Tags PWA Essenciais -->
   <meta name="theme-color" content="#000070">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Aplicativo oficial com links úteis para professores do Colégio Vicente Rijo">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <!-- CSS Local -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Manifest -->
+  
+  <!-- Manifest PWA -->
   <link rel="manifest" href="manifest.json">
+  
   <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" href="images/icons/icon-192.png">
 </head>
+
 <body>
+  <!-- Container Principal -->
   <div class="app-container">
-    <!-- Header Gradient -->
-    <div class="header-gradient">
+    
+    <!-- Cabeçalho com Gradiente -->
+    <header class="header-gradient">
       <div class="container">
         <div class="logo-container">
-          <img src="images/logo.webp" alt="Vicente Rijo" class="logo">
+          <img src="images/logo.webp" alt="Colégio Vicente Rijo" class="logo" loading="lazy">
         </div>
         <h1>Portal do Professor</h1>
         <p class="subtitle">Tudo organizado em um só lugar</p>
       </div>
-    </div>
+    </header>
 
-    <!-- Main Content -->
+    <!-- Conteúdo Principal -->
     <main class="container">
-      <!-- Contatos Emergenciais -->
-      <div class="emergency-card card-glass">
-        <button id="emergency-btn" class="emergency-btn">
+      
+      <!-- Seção de Contatos Emergenciais -->
+      <section class="emergency-card card-glass">
+        <button id="emergency-btn" class="emergency-btn" aria-expanded="false" aria-controls="emergency-contacts">
           <i class="bi bi-phone-vibrate"></i>
           Contatos Emergenciais
           <i class="bi bi-chevron-down"></i>
         </button>
-        <div id="emergency-contacts" class="hidden">
+        
+        <div id="emergency-contacts" class="hidden" aria-hidden="true">
+          <!-- Direção -->
           <div class="contact-group">
             <h3><i class="bi bi-person-gear"></i> Direção</h3>
-            <a href="https://wa.me/5543999999999" class="whatsapp-btn">
-              <i class="bi bi-whatsapp"></i> Prof. João Silva
+            <a href="https://wa.me/5543999999999" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Prof. João Silva (Diretor)
             </a>
           </div>
           
+          <!-- Pedagogia - Ensino Médio -->
           <div class="contact-group">
             <h3><i class="bi bi-mortarboard"></i> Pedagogia - EM</h3>
-            <a href="https://wa.me/5543999999991" class="whatsapp-btn">
+            <a href="https://wa.me/5543999999991" class="whatsapp-btn" target="_blank" rel="noopener">
               <i class="bi bi-whatsapp"></i> Prof. Maria Oliveira
             </a>
-            <!-- Mais contatos... -->
+            <a href="https://wa.me/5543999999992" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Prof. Carlos Souza
+            </a>
+            <a href="https://wa.me/5543999999993" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Prof. Ana Pereira
+            </a>
+          </div>
+          
+          <!-- Pedagogia - Ensino Fundamental -->
+          <div class="contact-group">
+            <h3><i class="bi bi-backpack"></i> Pedagogia - EF</h3>
+            <a href="https://wa.me/5543999999994" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Prof. Pedro Costa
+            </a>
+            <a href="https://wa.me/5543999999995" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Prof. Juliana Santos
+            </a>
+            <a href="https://wa.me/5543999999996" class="whatsapp-btn" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Prof. Roberto Almeida
+            </a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Links Principais -->
-      <div class="links-grid">
-        <a href="https://registropontoseed.pr.gov.br" class="link-card">
-          <div class="link-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);">
+      <!-- Grade de Links Principais -->
+      <section class="links-grid">
+        <!-- Sistema de Ponto -->
+        <a href="https://registropontoseed.pr.gov.br" class="link-card" target="_blank" rel="noopener">
+          <div class="link-icon" style="--icon-color: #ff9a9e">
             <i class="bi bi-fingerprint"></i>
           </div>
           <span>Sistema de Ponto</span>
         </a>
         
-        <!-- Outros links com ícones e gradientes únicos... -->
-      </div>
+        <!-- Mural do Professor -->
+        <a href="https://sites.google.com/escola.pr.gov.br/muraldoprofessorvicenterijo" class="link-card" target="_blank" rel="noopener">
+          <div class="link-icon" style="--icon-color: #a18cd1">
+            <i class="bi bi-chat-square-text"></i>
+          </div>
+          <span>Mural do Professor</span>
+        </a>
+        
+        <!-- RCO -->
+        <a href="https://rco.paas.pr.gov.br/" class="link-card" target="_blank" rel="noopener">
+          <div class="link-icon" style="--icon-color: #84fab0">
+            <i class="bi bi-journal-bookmark"></i>
+          </div>
+          <span>Registro de Classe (RCO)</span>
+        </a>
+        
+        <!-- Horário Laboratórios -->
+        <a href="https://docs.google.com/spreadsheets/d/1vlClPLWDPgd2ShuI6qdpeDYctPFJsy3S/edit" class="link-card" target="_blank" rel="noopener">
+          <div class="link-icon" style="--icon-color: #fbc2eb">
+            <i class="bi bi-clock"></i>
+          </div>
+          <span>Horário Laboratórios</span>
+        </a>
+        
+        <!-- E-mail de Provas -->
+        <a href="mailto:provasvicenterijo@gmail.com" class="link-card">
+          <div class="link-icon" style="--icon-color: #ffc3a0">
+            <i class="bi bi-envelope"></i>
+          </div>
+          <span>E-mail de Provas</span>
+        </a>
+        
+        <!-- Contracheque -->
+        <a href="https://appsouparana.paas.pr.gov.br/login" class="link-card" target="_blank" rel="noopener">
+          <div class="link-icon" style="--icon-color: #ffb347">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <span>Contracheque</span>
+        </a>
+      </section>
+      
+      <!-- Botão de Tutoriais -->
+      <section class="tutorial-section">
+        <a href="https://drive.google.com/drive/folders/..." class="tutorial-btn" target="_blank" rel="noopener">
+          <i class="bi bi-file-earmark-text"></i> Tutoriais e Manuais
+        </a>
+      </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="footer">
       <p>Desenvolvido com <i class="bi bi-heart-fill"></i> por Prof. Bruno Carvalho, 2025</p>
     </footer>
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/pwa.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pwa.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
