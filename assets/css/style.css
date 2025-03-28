@@ -1,75 +1,138 @@
-/* Configurações Gerais */
 :root {
   --primary: #000070;
   --secondary: #fbff00;
-  --light: #f8f9fa;
-  --dark: #212529;
+  --dark: #0a0a3a;
+  --light: #ffffff;
+  --glass: rgba(255, 255, 255, 0.15);
 }
 
+/* Base Styles */
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: var(--primary);
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+  color: var(--light);
   min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
 }
 
-.bg-primary {
-  background-color: var(--primary) !important;
+.app-container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
-.bg-secondary {
-  background-color: var(--secondary) !important;
-}
-
-.text-primary {
-  color: var(--primary) !important;
-}
-
-.text-secondary {
-  color: var(--secondary) !important;
-}
-
-.btn-warning {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.btn-warning:hover {
-  background-color: #e6e900;
-  border-color: #e6e900;
-  color: var(--primary);
-}
-
-.list-group-item {
-  transition: all 0.3s ease;
-  border-left: 4px solid transparent;
-}
-
-.list-group-item:hover {
-  transform: translateX(5px);
-  border-left: 4px solid var(--secondary);
-  background-color: rgba(251, 255, 0, 0.1);
+/* Header Gradient */
+.header-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a1a8a 100%);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 70, 0.3);
 }
 
 .logo {
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
 }
 
-/* Efeito para links integrados */
-.connected-link {
-  background-color: rgba(251, 255, 0, 0.1) !important;
-  border-left: 4px solid var(--secondary) !important;
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  opacity: 0.9;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* Glass Cards */
+.card-glass {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Links Grid */
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.link-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Botões */
+.whatsapp-btn {
+  display: block;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background: #25D366;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #128C7E;
+  transform: translateX(5px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /* Responsividade */
 @media (max-width: 576px) {
-  .container {
-    padding: 15px;
+  .links-grid {
+    grid-template-columns: 1fr;
   }
   
-  h1 {
-    font-size: 1.5rem;
+  .header-gradient {
+    padding: 1.5rem 1rem;
   }
 }

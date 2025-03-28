@@ -4,111 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal do Professor | Vicente Rijo</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Meta Tags PWA -->
+  <meta name="theme-color" content="#000070">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- CSS Local -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- PWA -->
+  <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000070">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="images/icons/icon-192.png">
 </head>
-<body class="bg-primary">
-  <div class="container py-4">
-    <!-- Cabeçalho -->
-    <header class="text-center mb-4">
-      <img src="assets/img/logo.png" alt="Colégio Vicente Rijo" class="logo img-fluid mb-3" style="max-height: 120px;">
-      <h1 class="text-white fw-bold">Portal do Professor</h1>
-      <p class="text-warning">Acesso rápido aos recursos educacionais</p>
-    </header>
-
-    <!-- Botão de Login GovPR -->
-    <div class="d-grid gap-2 mb-4">
-      <button id="govpr-login" class="btn btn-warning btn-lg fw-bold">
-        <i class="fas fa-sign-in-alt me-2"></i> Acessar com GovPR
-      </button>
-      <div id="login-status" class="text-white text-center small mt-1"></div>
+<body>
+  <div class="app-container">
+    <!-- Header Gradient -->
+    <div class="header-gradient">
+      <div class="container">
+        <div class="logo-container">
+          <img src="images/logo.webp" alt="Vicente Rijo" class="logo">
+        </div>
+        <h1>Portal do Professor</h1>
+        <p class="subtitle">Tudo organizado em um só lugar</p>
+      </div>
     </div>
 
-    <!-- Contatos de Emergência -->
-    <div class="card mb-4 border-0 shadow">
-      <div class="card-header bg-dark text-white">
-        <button id="emergency-btn" class="btn btn-link text-white w-100 text-decoration-none" data-bs-toggle="collapse" data-bs-target="#emergency-contacts">
-          <i class="fas fa-ambulance me-2"></i> Contatos de Emergência
-          <i class="fas fa-chevron-down float-end"></i>
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Contatos Emergenciais -->
+      <div class="emergency-card card-glass">
+        <button id="emergency-btn" class="emergency-btn">
+          <i class="bi bi-phone-vibrate"></i>
+          Contatos Emergenciais
+          <i class="bi bi-chevron-down"></i>
         </button>
-      </div>
-      <div id="emergency-contacts" class="collapse">
-        <div class="card-body bg-light">
-          <h5 class="text-dark mb-3"><i class="fas fa-user-tie text-primary me-2"></i> Direção</h5>
-          <a href="https://wa.me/5543999999999" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. João Silva (Diretor)
-          </a>
+        <div id="emergency-contacts" class="hidden">
+          <div class="contact-group">
+            <h3><i class="bi bi-person-gear"></i> Direção</h3>
+            <a href="https://wa.me/5543999999999" class="whatsapp-btn">
+              <i class="bi bi-whatsapp"></i> Prof. João Silva
+            </a>
+          </div>
           
-          <h5 class="text-dark mt-3 mb-3"><i class="fas fa-chalkboard-teacher text-primary me-2"></i> Pedagogia - Ensino Médio</h5>
-          <a href="https://wa.me/5543999999991" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. Maria Oliveira
-          </a>
-          <a href="https://wa.me/5543999999992" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. Carlos Souza
-          </a>
-          <a href="https://wa.me/5543999999993" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. Ana Pereira
-          </a>
-          
-          <h5 class="text-dark mt-3 mb-3"><i class="fas fa-school text-primary me-2"></i> Pedagogia - Ensino Fundamental</h5>
-          <a href="https://wa.me/5543999999994" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. Pedro Costa
-          </a>
-          <a href="https://wa.me/5543999999995" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. Juliana Santos
-          </a>
-          <a href="https://wa.me/5543999999996" class="btn btn-success btn-sm mb-2 w-100 text-start">
-            <i class="fab fa-whatsapp me-2"></i> Prof. Roberto Almeida
-          </a>
+          <div class="contact-group">
+            <h3><i class="bi bi-mortarboard"></i> Pedagogia - EM</h3>
+            <a href="https://wa.me/5543999999991" class="whatsapp-btn">
+              <i class="bi bi-whatsapp"></i> Prof. Maria Oliveira
+            </a>
+            <!-- Mais contatos... -->
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Links Principais -->
-    <div class="list-group mb-4 shadow">
-      <a href="https://registropontoseed.pr.gov.br" class="list-group-item list-group-item-action" id="ponto-link">
-        <i class="fas fa-fingerprint text-primary me-3"></i> Sistema de Ponto
-      </a>
-      <a href="https://sites.google.com/escola.pr.gov.br/muraldoprofessorvicenterijo" class="list-group-item list-group-item-action">
-        <i class="fas fa-chalkboard text-primary me-3"></i> Mural do Professor
-      </a>
-      <a href="https://rco.paas.pr.gov.br/" class="list-group-item list-group-item-action" id="rco-link">
-        <i class="fas fa-book-open text-primary me-3"></i> RCO (Registro de Classe Online)
-      </a>
-      <a href="https://docs.google.com/spreadsheets/d/1vlClPLWDPgd2ShuI6qdpeDYctPFJsy3S/edit" class="list-group-item list-group-item-action">
-        <i class="fas fa-clock text-primary me-3"></i> Horário dos Laboratórios
-      </a>
-      <a href="mailto:provasvicenterijo@gmail.com" class="list-group-item list-group-item-action">
-        <i class="fas fa-envelope text-primary me-3"></i> E-mail de Provas
-      </a>
-      <a href="https://appsouparana.paas.pr.gov.br/login" class="list-group-item list-group-item-action" id="contracheque-link">
-        <i class="fas fa-money-bill-wave text-primary me-3"></i> Contracheque
-      </a>
-    </div>
+      <!-- Links Principais -->
+      <div class="links-grid">
+        <a href="https://registropontoseed.pr.gov.br" class="link-card">
+          <div class="link-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);">
+            <i class="bi bi-fingerprint"></i>
+          </div>
+          <span>Sistema de Ponto</span>
+        </a>
+        
+        <!-- Outros links com ícones e gradientes únicos... -->
+      </div>
+    </main>
 
-    <!-- Botão de Tutoriais -->
-    <a href="https://drive.google.com/" class="btn btn-warning btn-lg w-100 mb-3 shadow">
-      <i class="fas fa-question-circle me-2"></i> Tutoriais e Manuais
-    </a>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Desenvolvido com <i class="bi bi-heart-fill"></i> por Prof. Bruno Carvalho, 2025</p>
+    </footer>
   </div>
 
-  <!-- Rodapé -->
-  <footer class="text-center text-white py-3 bg-dark">
-    <p class="mb-0 small">Colégio Estadual Vicente Rijo - Londrina/PR</p>
-  </footer>
-
-  <!-- Bootstrap JS + Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- App JS -->
+  <!-- Scripts -->
+  <script src="assets/js/pwa.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
