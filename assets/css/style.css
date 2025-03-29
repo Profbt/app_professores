@@ -1,11 +1,13 @@
 :root {
-  --primary: #2c3e50;
-  --secondary: #e74c3c;
-  --accent: #3498db;
+  --primary: #003366; /* Azul escuro */
+  --secondary: #fdf003; /* Amarelo */
+  --accent: #ff6600;
   --whatsapp: #017a2e;
   --light: #ecf0f1;
-  --dark: #2c3e50;
-  --text: #34495e;
+  --dark: #002244;
+  --text: #333;
+  --bg-light: linear-gradient(135deg, #003366 0%, #0055a5 100%);
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 /* Reset e Base */
@@ -17,13 +19,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
+  background: var(--bg-light);
   color: var(--text);
   line-height: 1.6;
 }
 
 .app-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   min-height: 100vh;
@@ -37,21 +39,21 @@ body {
 }
 
 .app-logo {
-  height: 250px;
-  margin-bottom: 20px;
+  height: 220px;
+  margin-bottom: 15px;
   object-fit: contain;
-  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 5px 15px var(--shadow));
 }
 
 .app-header h1 {
-  font-size: 2.5rem;
-  color: var(--primary);
+  font-size: 2.3rem;
+  color: var(--secondary);
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .app-subtitle {
-  color: #7f8c8d;
+  color: #f1c40f;
   font-weight: 400;
   font-size: 1.1rem;
 }
@@ -62,14 +64,14 @@ body {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px var(--shadow);
 }
 
 .emergency-btn {
   width: 100%;
   padding: 18px 25px;
   background: var(--secondary);
-  color: white;
+  color: var(--dark);
   border: none;
   border-radius: 15px 15px 0 0;
   font-size: 1.2rem;
@@ -82,25 +84,12 @@ body {
 }
 
 .emergency-btn:hover {
-  background: #c0392b;
+  background: #e6b800;
 }
 
 .contacts-container {
   padding: 25px;
   background: white;
-}
-
-.contact-group {
-  margin-bottom: 25px;
-}
-
-.contact-group h3 {
-  color: var(--primary);
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.1rem;
 }
 
 .contact-btn {
@@ -141,24 +130,24 @@ body {
   text-align: center;
   text-decoration: none;
   color: var(--text);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: all 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .app-link:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  background: var(--primary);
-  color: white;
+  box-shadow: 0 15px 30px var(--shadow);
+  background: var(--secondary);
+  color: var(--dark);
 }
 
 .app-link:hover .link-icon {
-  background: white;
-  color: var(--primary);
+  background: var(--dark);
+  color: var(--secondary);
 }
 
 .link-icon {
@@ -183,8 +172,8 @@ body {
   gap: 10px;
   width: 100%;
   padding: 18px;
-  background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--secondary) 0%, #ffdb4d 100%);
+  color: var(--dark);
   text-align: center;
   border-radius: 15px;
   text-decoration: none;
@@ -192,12 +181,12 @@ body {
   font-size: 1.2rem;
   transition: all 0.3s;
   margin-top: 30px;
-  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.2);
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
 }
 
 .tutorial-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(44, 62, 80, 0.3);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.5);
 }
 
 /* Footer */
@@ -205,13 +194,59 @@ body {
   text-align: center;
   margin-top: 60px;
   padding: 25px;
-  color: #7f8c8d;
+  color: #f1c40f;
   font-size: 0.9rem;
 }
 
 .app-footer i {
-  color: var(--secondary);
+  color: inherit;
 }
+
+.app-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.social-media p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon.instagram {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.social-icon.facebook {
+  background: #1877f2;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Classes Utilitárias */
 .hidden {
@@ -221,7 +256,7 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
   .app-logo {
-    height: 200px;
+    height: 180px;
   }
   
   .links-grid {
@@ -231,7 +266,11 @@ body {
 
 @media (max-width: 480px) {
   .app-logo {
-    height: 160px;
+    height: 140px;
+  }
+
+  .app-header {
+    font-size: 70%;
   }
   
   .links-grid {
