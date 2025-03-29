@@ -221,7 +221,7 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
   .app-logo {
-    height: 140px;
+    height: 200px;
   }
   
   .links-grid {
@@ -231,7 +231,7 @@ body {
 
 @media (max-width: 480px) {
   .app-logo {
-    height: 120px;
+    height: 160px;
   }
   
   .links-grid {
